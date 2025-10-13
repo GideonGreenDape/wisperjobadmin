@@ -5,15 +5,15 @@ const baseStyles =
 
 const sizes = {
   sm: "h-8 px-3 text-[16px]",
-  md: "h-[48px] w-[170px] text-[16px]",
-  lg: "h-[48px] w-[561px] text-[16px]",
+  md: "h-[37px] w-[115px] text-[13px]",
+  lg: "h-[40px] w-[360px] text-[13px]",
 };
 
 const variants = {
   primary:
     "bg-[#000000] text-[#ffffff] border-[#ffffff] hover:opacity-90 active:bg-gray-800 disabled:opacity-60",
   secondary:
-    "bg-[#168DE1] text-white border-[#168DE1] hover:bg-[#0f6dad] active:bg-[#093F66] disabled:opacity-60",
+    "bg-[#168DE1] text-white  border-[#168DE1] hover:bg-[#0f6dad] active:bg-[#093F66] disabled:opacity-60",
   outline:
     "bg-transparent text-black border-black hover:bg-gray-50 active:bg-gray-200 disabled:opacity-60",
   danger:
@@ -58,7 +58,7 @@ export function Button({
     return (
       <Link
         to={to}
-        className={`${baseStyles} ${variantClass} ${sizeClass} ${className}`}
+        className={`${baseStyles} ${variantClass} no-underline hover:no-underline ${sizeClass} ${className}`}
         {...props}
       >
         {content}

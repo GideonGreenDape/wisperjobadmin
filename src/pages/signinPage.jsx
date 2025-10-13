@@ -12,6 +12,13 @@ function SignIn() {
 
   return (
     <div className="fixed top-[64px] right-[0px] gap-[17px] flex items-start bg-[#000000] h-screen w-[1365px]">
+       <div>
+        <img
+          className="w-[689px] w-[689px] h-full "
+          src={Images.signinImage}
+          alt="sign in image"
+        />
+      </div>
       <div className="w-[689px]  flex flex-col justify-center items-start ">
         <div className="w-[559px] flex justify-between items-center ">
           <p className="font-bold text-[32px] text-[#ffffff]">SignUp</p>
@@ -22,7 +29,7 @@ function SignIn() {
             label="Email"
             type="email"
             placeholder="youraddress@gmail.com "
-            size="lg"
+            size="md"
             onchange={setEmail}
             error=""
             className="mb-[24px] "
@@ -32,17 +39,16 @@ function SignIn() {
             type="password"
             placeholder="Enter your password"
             onchange={setPassword}
-            size="lg"
+            size="md"
             error=""
             className="mb-[24px] "
           />
 
-          <PasswordChecklist password={password} />
-
           <Button
-            size="lg"
+            size="md"
             variant="secondary"
             className="mt-[40px] mb-5 text-[#ffffff] rounded-[7px] "
+            
           >
             {" "}
             Sign In{" "}
@@ -53,21 +59,16 @@ function SignIn() {
           </div>
 
           <div className="flex justify-center mt-[15px] ">
-             <p className="text-[14px] text-[#8c8c8c] font-light mt-[30px] w-[559px] ">
-                By signing up, you agree to our Terms & conditions and Privacy policy
-            </p>
+             <pre className="text-[14px] text-[#8c8c8c] font-light mt-[30px] w-[559px] ">
+                By signing up, i agree to the wisper 
+                Terms & conditions and Privacy policy
+            </pre>
           </div>
           
         </div>
       </div>
 
-      <div>
-        <img
-          className="w-[689px] w-[689px] h-full "
-          src={Images.signupImage}
-          alt="signup"
-        />
-      </div>
+    
     </div>
   );
 }

@@ -4,6 +4,7 @@ import Button from "../components/ui/button";
 import Input from "../components/ui/Input";
 import SocialLogin from "../components/socials/socialLogin";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Signup() {
   const [password, setPassword] = useState("");
@@ -12,39 +13,37 @@ function Signup() {
   const [phoneNumber, setPhoneNumber] = useState("");
 
   return (
-    <div className="fixed top-[64px] right-[0px] gap-[17px] flex items-start bg-[#000000] h-screen w-[1365px]">
-      <div className="w-[689px]  flex flex-col justify-center items-start ">
-        <div className="w-[559px] flex justify-between items-center ">
-          <p className="font-bold text-[32px] text-[#ffffff]">SignUp</p>
-          <p className="text-[#168DE1] font-medium text-[20px]">Login</p>
+      <div className="pl-[20px] pt-[20px] ">
+        <div className="flex items-start  bg-[#000000] justify-end pt-[25px] gap-[140px] ">
+      <div className="flex flex-col justify-center items-start ">
+        <div className="w-[355px] flex justify-between items-center ">
+          <p className=" font-bold text-[16px] text-[#ffffff]">SignUp</p>
+          <Link to={'/signin'} className="text-[#168DE1] font-bold font-medium text-[14px]">Login</Link>
         </div>
-        <div className=" ">
+        <div className="flex flex-col mt-[19px] gap-[15px] ">
           <Input
             label="Email"
             type="email"
             placeholder="youraddress@gmail.com "
-            size="lg"
+            size="md"
             onchange={setEmail}
             error=""
-            className="mb-[24px] "
           />
           <Input
             label="Password"
             type="password"
             placeholder="Enter your password"
             onchange={setPassword}
-            size="lg"
+            size="md"
             error=""
-            className="mb-[24px] "
           />
           <Input
             label="Confirm Password"
             type="password"
             placeholder="Confirm your password "
             onchange={setConfirmPassword}
-            size="lg"
+            size="md"
             error=""
-            className="mb-[24px]"
           />
           <Input
             label="Phone Number"
@@ -53,7 +52,6 @@ function Signup() {
             onchange={setPhoneNumber}
             size="md"
             error=""
-            className="mb-6"
           />
 
           <PasswordChecklist password={password} />
@@ -61,33 +59,34 @@ function Signup() {
           <Button
             size="lg"
             variant="secondary"
-            className="mt-[40px] mb-5 text-[#ffffff] rounded-[7px] "
+            className="text-[#ffffff] rounded-[7px] "
+            to={'/signin'}
           >
             {" "}
             Sign Up{" "}
           </Button>
 
-          <div className="flex justify-center mt-[15px] ">
+          <div className="flex justify-center ">
             <SocialLogin />
           </div>
 
-          <div className="flex justify-center mt-[15px] ">
-             <p className="text-[14px] text-[#8c8c8c] font-light mt-[30px] w-[559px] ">
-                By signing up, you agree to our Terms & conditions and Privacy policy
+           <p className="self-center text-[12px] text-[#8c8c8c] font-light text-center w-[250px] ">
+                By signing up, i agree to the wisper 
+                Terms & conditions and Privacy policy
             </p>
-          </div>
           
         </div>
       </div>
 
-      <div>
+      <div className="w-[480px] mt-[25px] ">
         <img
-          className="w-[689px] w-[689px] h-full "
+          className="w-full h-full object-contain"
           src={Images.signupImage}
           alt="signup"
         />
       </div>
     </div>
+      </div>
   );
 }
 

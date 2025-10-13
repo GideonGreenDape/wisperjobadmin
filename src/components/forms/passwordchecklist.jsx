@@ -16,19 +16,19 @@ const PasswordChecklist = ({ password }) => {
       className="bg-black rounded-lg flex flex-col text-white p-3"
       style={{
         width: "262px",
-        height: "147px",
-        gap: "10px",
+        // height: "147px",
+        gap: "2px",
       }}
     >
       
-      <p className="text-[15px] text-[#ffffff] font-light ">PASSWORD MUST CONTAIN AT LEAST</p>
+      <p className="text-[10px] text-[#ffffff] font-light ">PASSWORD MUST CONTAIN AT LEAST</p>
 
       
       <div className="flex flex-col gap-[5px]">
         {rules.map((rule, idx) => (
           <div
             key={idx}
-            className="flex items-center gap-1 h-[24px]"
+            className="flex items-center gap-1 h-[20px]"
           >
             <Icons.CircleCheck
               size={16}
@@ -36,7 +36,7 @@ const PasswordChecklist = ({ password }) => {
               className={rule.valid ? "text-[#168DE1]" : "text-[#f9f9f9] "}
             />
             <span
-              className={`text-[12px] ml-[10px] ${
+              className={`text-[10px] ml-[10px] ${
                 rule.valid ? "text-[#168DE1]" : "text-[#f9f9f9]"
               }`}
             >

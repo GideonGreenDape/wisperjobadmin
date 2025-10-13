@@ -18,7 +18,7 @@ const slidesData = [
 
 const OnboardingScreen = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const intervalTime = 5500; 
+  const intervalTime = 6500; 
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -34,8 +34,8 @@ const OnboardingScreen = () => {
     <div
       className="bg-black text-white p-0 overflow-hidden flex flex-col justify-between items-center "
       style={{
-        width: '449px',
-        height: '418px',
+        width: '380px',
+        height: '320px',
         opacity: 1,
       }}
     >
@@ -43,17 +43,17 @@ const OnboardingScreen = () => {
       <img
         src={slide.imageSrc}
         alt={`Slide ${slide.id}`}
-        className="w-[308px] h-[272px] object-contain mt-4 rounded-xl shadow-lg"
+        className="w-[240px]  object-contain mt-3 rounded-xl shadow-lg"
       />
 
       
-      <div className="flex flex-col items-center text-center mb-4">
+      <div className="flex flex-col items-center text-center mb-2">
         <h2
           className="transition-opacity duration-1000 text-center text-white font-[Urbanist] font-bold"
           style={{
             width: '449px',
             height: '29px',
-            fontSize: '24px',
+            fontSize: '19px',
             lineHeight: '100%',
             letterSpacing: '-0.02em',
             color: '#FFFFFF',
@@ -63,11 +63,11 @@ const OnboardingScreen = () => {
         </h2>
 
         <p
-          className="transition-opacity duration-1000 text-center text-gray-400 font-[Urbanist] mt-2"
+          className="transition-opacity duration-1000 text-center text-gray-400 font-[Urbanist] mt-1"
           style={{
-            width: '449px',
+            width: '340px',
             fontWeight: 400,
-            fontSize: '16px',
+            fontSize: '12px',
             lineHeight: '100%',
             color: '#B3B3B3',
           }}
@@ -77,7 +77,7 @@ const OnboardingScreen = () => {
       </div>
 
       
-      <div className="flex justify-center w-full mb-4 gap-[8px] ">
+      <div className="flex justify-center w-full mb-2 gap-[8px] ">
         {slidesData.map((_, index) => (
           <div
             key={index}

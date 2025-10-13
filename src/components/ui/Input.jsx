@@ -1,7 +1,7 @@
 const sizes = {
   sm: "w-[162px] h-[56px] ",
-  md: "w-[363px] h-[56px] ",
-  lg: "w-[547px] h-[56px] ",
+  md: "w-[330px] h-[38px] ",
+  lg: "w-[547px] h-[46px] ",
   xl: "w-[766px] h-[56px] ",
   xxl: "w-[951px] h-14 ",
   textarea: "w-[951px] h-14 ",
@@ -13,7 +13,7 @@ const Input = ({
   value,
   onchange,
   addon = null,
-  size = "md",
+  size ,
   type = "text",
   placeholder,
   className = "",
@@ -27,13 +27,13 @@ const Input = ({
     <div className={`flex flex-col mb-3 ${className}`}>
       {label && (
         <label
-          className={`mb-[6px] font-normal text-[#ffffff] text-[17px] ${labelClassName}`}
+          className={`mb-[6px] font-normal text-[#ffffff] text-[12px] ${labelClassName}`}
         >
           {label}
         </label>
       )}
       <div
-        className={`flex items-center rounded-[12px] overflow-hidden ${
+        className={`flex items-center w-fit rounded-[10px] overflow-hidden ${
           isError ? "border border-red-500" : "border border-[#2c2c2c]"
         } bg-[#181818]  `}
       >
@@ -43,7 +43,7 @@ const Input = ({
           onChange={(e) => onchange(e.target.value)}
           placeholder={placeholder}
           className={`${sizes[size]} 
-        flex-1 border-none bg-transparent text-[20px] 
+       border-none bg-transparent text-[12px] 
         font-normal text-[#ffffff] placeholder-[#8c8c8c] pl-[14px] pt-3 pr-[10px] focus:outline-none
         ${inputClassName}  ${
             isError
