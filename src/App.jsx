@@ -1,23 +1,23 @@
 // routes.jsx or main.jsx
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Dashboard from "./pages/Dashboard/index";
+import Dashboard from "./pages/Dashboard/index.jsx";
 
-import Jobs from "./pages/dashboard/jobs/index";
-import Courses from "./pages/dashboard/Courses/index";
-import Wallet from "./pages/Dashboard/wallet/index";
+import Jobs from "./pages/dashboard/jobs/index.jsx";
+import Courses from "./pages/dashboard/Courses/index.jsx";
+import Wallet from "./pages/Dashboard/wallet/index.jsx";
 
-import DashboardHome from "./pages/Dashboard/dashboardHome";
+import DashboardHome from "./pages/Dashboard/dashboardHome.jsx";
 
-import Profile from "./pages/dashboard/profile/index";
+import Profile from "./pages/dashboard/profile/index.jsx";
 
 
-import Onboarding from "./pages/onboardingPage";
-import Signup from "./pages/signupPage";
-import SignIn from "./pages/signinPage";
-import TrackPage from "./pages/trackPage";
-import ProfilePage from "./pages/profileSetupPage";
-import OtpPage from "./pages/otpPage";
-import ProfileUploadPage from "./pages/profileUpload";
+import Onboarding from "./pages/onboardingPage.jsx";
+import Signup from "./pages/signupPage.jsx";
+import SignIn from "./pages/signinPage.jsx";
+import TrackPage from "./pages/trackPage.jsx";
+import ProfilePage from "./pages/profileSetupPage.jsx";
+import OtpPage from "./pages/otpPage.jsx";
+import ProfileUploadPage from "./pages/profileUpload.jsx";
 
 const router = createBrowserRouter([
   {
