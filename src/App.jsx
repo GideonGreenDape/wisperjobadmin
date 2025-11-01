@@ -2,13 +2,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/index.jsx";
 
-import Jobs from "./pages/dashboard/jobs/index.jsx";
-import Courses from "./pages/dashboard/Courses/index.jsx";
-import Wallet from "./pages/Dashboard/wallet/index.jsx";
+// import Jobs from "./pages/dashboard/jobs/index.jsx";
+// import Courses from "./pages/dashboard/Courses/index.jsx";
+// import Wallet from "./pages/Dashboard/wallet/index.jsx";
 
 import DashboardHome from "./pages/Dashboard/dashboardHome.jsx";
 
-import Profile from "./pages/dashboard/profile/index.jsx";
+// import Profile from "./pages/dashboard/profile/index.jsx";
 
 
 import Onboarding from "./pages/onboardingPage.jsx";
@@ -58,22 +58,22 @@ const router = createBrowserRouter([
         index: true, 
         element: <DashboardHome />,
       },
-      {
-        path: "jobs",
-        element: <Jobs />,
-      },
-      {
-        path: "courses",
-        element: <Courses />,
-      },
-      {
-        path: "wallet",
-        element: <Wallet />,
-      },
-      {
-        path: "profile",
-        element: <Profile />,
-      },
+      // {
+      //   path: "jobs",
+      //   element: <Jobs />,
+      // },
+      // {
+      //   path: "courses",
+      //   element: <Courses />,
+      // },
+      // {
+      //   path: "wallet",
+      //   element: <Wallet />,
+      // },
+      // {
+      //   path: "profile",
+      //   element: <Profile />,
+      // },
     ],
   },
 ]);
