@@ -1,9 +1,27 @@
 import WisperIcon from './wisper.svg';
 import googleIcon from './google.png';
 import facebook  from './facebook.png'
+import stateOne from './stateOne.png';
+import stateTwo from './stateTwo.png';
+import stateThree from './stateThree.png';
+import backarrow from './backarrow.png'
 
 // lucide -icons
-import { LayoutDashboard, BriefcaseBusiness as JobIcon, BookMarked as CourseIcon, WalletMinimal as WalletIcon, User as ProfileIcon, Bell as NotificationIcon, ChevronLeft as BackwardIcon, ImagePlus as ImageIcon, SlidersHorizontal as FilterIcon, CircleCheck , Circle } from 'lucide-react';
+import { LayoutDashboard, 
+    BriefcaseBusiness as JobIcon, 
+    BookMarked as CourseIcon, 
+    WalletMinimal as WalletIcon, 
+    User as ProfileIcon, 
+    Bell as NotificationIcon, 
+    ChevronLeft as BackwardIcon, 
+    ImagePlus as ImageIcon, 
+    SlidersHorizontal as FilterIcon, 
+    CircleCheck , 
+    Circle, 
+    Check, 
+    Headset as Support, 
+    LogOut, 
+    CornerRightUp  } from 'lucide-react';
 
 
 
@@ -13,6 +31,10 @@ const Icons = {
     WisperIcon,
     googleIcon,
     facebook, 
+    stateOne,
+    stateTwo,
+    stateThree,
+    backarrow,
     
     // lucide Icons
     LayoutDashboard,
@@ -26,6 +48,10 @@ const Icons = {
     FilterIcon,
     CircleCheck,
     Circle,
+    Check,
+    Support,
+    LogOut,
+    CornerRightUp
 }
 
 

@@ -1,5 +1,5 @@
 export const jobs = {
-    label: "Job Type",
+    label: "Select Industry",
     values: [
         "Agritech",
         "Agricultural and Agribusiness",

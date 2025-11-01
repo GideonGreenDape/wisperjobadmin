@@ -1,7 +1,8 @@
 const sizes = {
   sm: "w-[162px] h-[56px] ",
+  smd: "w-[250px] h-[38px] ",
   md: "w-[330px] h-[38px] ",
-  lg: "w-[547px] h-[46px] ",
+  lg: "w-[547px] h-[38px] ",
   xl: "w-[766px] h-[56px] ",
   xxl: "w-[951px] h-14 ",
   textarea: "w-[951px] h-14 ",

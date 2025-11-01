@@ -4,7 +4,7 @@ import Icons from "../../assets/icons"
 function SocialLogin() {
 
     return(
-        <div className='flex flex-col items-center gap-[2px] justify-center  w-[116px] bg-black ' >
+        <div className='flex flex-col items-center gap-[6px] justify-center  w-[116px] bg-black ' >
           <p className='font-ubarnist font-medium text-[11px] text-[#ffffff] ' >Sign Up With</p>
           <div className='flex gap-[4px] items-center  w-[60px] ' >
               <div className='flex items-center w-[32px] h-[32px] ' >

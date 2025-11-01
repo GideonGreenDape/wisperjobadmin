@@ -13,12 +13,12 @@ function Signup() {
   const [phoneNumber, setPhoneNumber] = useState("");
 
   return (
-      <div className="pl-[20px] pt-[20px] ">
-        <div className="flex items-start  bg-[#000000] justify-end pt-[25px] gap-[140px] ">
+      <div className=" ">
+        <div className="flex items-start h-screen mt-[20px] bg-[#000000] justify-center pt-[25px] gap-[100px] ">
       <div className="flex flex-col justify-center items-start ">
         <div className="w-[355px] flex justify-between items-center ">
           <p className=" font-bold text-[16px] text-[#ffffff]">SignUp</p>
-          <Link to={'/signin'} className="text-[#168DE1] font-bold font-medium text-[14px]">Login</Link>
+          <Link to={'/signin'} className="text-[#168DE1] underline-none font-bold font-medium text-[14px]">Login</Link>
         </div>
         <div className="flex flex-col mt-[19px] gap-[15px] ">
           <Input
@@ -78,9 +78,9 @@ function Signup() {
         </div>
       </div>
 
-      <div className="w-[480px] mt-[25px] ">
+      <div className="w-[420px] mt-[5px] ">
         <img
-          className="w-full h-full object-contain"
+          className="w-full h-full object-fit"
           src={Images.signupImage}
           alt="signup"
         />

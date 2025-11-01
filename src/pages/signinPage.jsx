@@ -4,6 +4,7 @@ import Button from "../components/ui/button";
 import Input from "../components/ui/Input";
 import SocialLogin from "../components/socials/socialLogin";
 import { useState } from "react";
+import {Link} from 'react-router-dom'
 
 function SignIn() {
   const [password, setPassword] = useState("");
@@ -11,18 +12,18 @@ function SignIn() {
  
 
   return (
-    <div className="fixed top-[64px] right-[0px] gap-[45px] flex items-start bg-[#000000] h-screen w-[1365px]">
+    <div className=" gap-[65px] flex items-start bg-[#000000] ml-[20px]  w-full">
        <div>
         <img
-          className="w-[560px] w-[689px] h-full "
+          className="w-[540px]  h-screen object-contain"
           src={Images.signinImage}
           alt="sign in image"
         />
       </div>
-      <div className="w-[689px] gap-[20px] mt-[40px] flex flex-col justify-center items-start ">
-        <div className="w-[350px] flex justify-between items-center ">
-          <p className="font-bold text-[16px] text-[#ffffff]">SignUp</p>
-          <p className="text-[#168DE1] font-medium text-[16px]">Login</p>
+      <div className="w-[640px] gap-[20px] mt-[80px] flex flex-col justify-center items-start ">
+        <div className="w-[350px] mb-[20px] flex justify-between items-center ">
+         <Link to={'/signup'} className=" text-[#168DE1] underline-none font-bold font-medium text-[14px]">Sign Up</Link>
+          {/* <Link to={''} className="text-[#168DE1] font-medium text-[14px]">Login</Link> */}
         </div>
         <div className=" ">
           <Input
@@ -32,7 +33,7 @@ function SignIn() {
             size="md"
             onchange={setEmail}
             error=""
-            className="mb-[24px] "
+            className="mb-[14px] "
           />
           <Input
             label="Password"
@@ -41,14 +42,14 @@ function SignIn() {
             onchange={setPassword}
             size="md"
             error=""
-            className="mb-[24px] "
+            className="mb-[14px] "
           />
 
           <Button
             size="lg"
             variant="secondary"
-            className="mt-[40px] mb-5 text-[#ffffff] rounded-[7px] "
-            
+            className="mt-[20px] mb-5 text-[#ffffff] rounded-[7px] "
+            to='/track'
           >
             {" "}
             Sign In{" "}
@@ -59,8 +60,8 @@ function SignIn() {
           </div>
 
           <div className="flex justify-center mt-[15px] ">
-             <p className="text-[14px] text-center text-[#8c8c8c] font-light mt-[30px] w-[300px] ">
-                By signing up, i agree to the wisper 
+             <p className="text-[12px] text-center text-[#8c8c8c] font-light mt-[] w-[300px] ">
+                By signing in, i agree to the wisper 
                 Terms & conditions and Privacy policy
             </p>
           </div>

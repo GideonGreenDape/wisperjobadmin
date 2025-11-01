@@ -9,7 +9,7 @@ const SelectableCard = ({
   return (
     <div
       onClick={() => onSelect(id)}
-      className={`relative bg-[#0F0F0F] border rounded-[16px] w-[279px] h-[357px] cursor-pointer transition-all duration-300
+      className={`relative bg-[#0F0F0F] border rounded-[16px] w-[239px] h-[300px] cursor-pointer transition-all duration-300
         ${
           selected
             ? "border-[2px] border-[#168DE1] shadow-[0_0_12px_2px_#168DE1]"
@@ -17,22 +17,22 @@ const SelectableCard = ({
         }`}
     >
       <div
-        className={`absolute top-[32px] left-[31px] w-[32px] h-[32px] rounded-full border transition-colors 
+        className={`absolute top-[32px] left-[31px] w-[20px] h-[20px] rounded-full border transition-colors 
           ${selected ? "border-[#168DE1] bg-[#168DE1]" : "border-[#168DE1]"}`}
       ></div>
 
       <img
         src={image}
         alt={title}
-        className="absolute top-[75px] left-[76px] w-[126px] h-[126px] object-contain"
+        className="absolute top-[75px] left-[79px] w-[70px] h-[70px] object-contain"
       />
 
-      <div className="absolute top-[231px] left-[31px] w-[218px] h-[93px] flex flex-col items-center gap-[12px]">
-        <h3 className="text-white font-urbanist font-semibold text-[20px] leading-[20px] tracking-[-0.045em]">
+      <div className="absolute top-[181px] left-[28px] w-[200px]  flex flex-col items-center gap-[10px]">
+        <h3 className="text-white font-urbanist font-semibold text-[15px]  ">
           {title}
         </h3>
 
-        <p className="text-[#AEAEAE] font-urbanist font-normal text-[16px] leading-[16px] tracking-[-0.045em] text-center">
+        <p className="text-[#AEAEAE] font-urbanist font-normal text-[13px]   text-center">
           {description}
         </p>
       </div>

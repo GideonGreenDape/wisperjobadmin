@@ -49,7 +49,7 @@ const OnboardingScreen = () => {
       
       <div className="flex flex-col items-center text-center mb-2">
         <h2
-          className="transition-opacity duration-1000 text-center text-white font-[Urbanist] font-bold"
+          className="transition-opacity duration-1000 text-center text-white font-urbanist font-bold"
           style={{
             width: '449px',
             height: '29px',
@@ -63,7 +63,7 @@ const OnboardingScreen = () => {
         </h2>
 
         <p
-          className="transition-opacity duration-1000 text-center text-gray-400 font-[Urbanist] mt-1"
+          className="transition-opacity duration-1000 text-center text-gray-400 font-urbanist mt-1"
           style={{
             width: '340px',
             fontWeight: 400,

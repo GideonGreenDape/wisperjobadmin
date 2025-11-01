@@ -5,6 +5,7 @@ import onboardingscreenOne from "./onboardingscreenOne.png";
 import onboardingscreentwo from "./onboardingscreentwo.png"
 import signupImage from "../images/signupimage.png";
 import signinImage from "../images/signinimage.png"
+import walletbackground from "../images/walletbackground.jpg"
 
 const Images= {
     defaultimage,
@@ -14,6 +15,7 @@ const Images= {
     onboardingscreentwo,
     signupImage,
     signinImage,
+    walletbackground,
 }
 
 

@@ -11,54 +11,61 @@ const Table = ({ data }) => {
   const totalPages = Math.ceil(data.length / rowsPerPage);
 
   return (
-    <div className="w-[967px] bg-black text-[16px] text-white font-normal">
+    <div className="w-[900px] mt-[20px]  text-[16px] text-white font-normal">
       {/* Header */}
-      <div className="grid grid-cols-5 h-[49px] border-b border-[#2C2C2C] px-4">
-        <div className="flex items-center">JOB TITLE</div>
-        <div className="flex items-center">JOB TYPE</div>
-        <div className="flex items-center">COMPANY</div>
-        <div className="flex items-center">APPLICATION</div>
-        <div className="flex items-center">STATUS</div>
+      <div className="grid grid-cols-6 h-[49px] bg-[#000] border-b !border-[#2C2C2C] px-4">
+        <div className="flex pl-[10px]  items-center"><p className="text-[11px] !text-[#AEAEAE] pl-[10px]  ">JOB TITLE</p></div>
+        <div className="flex pl-[10px] text-[13px] items-center"><p className="text-[11px] !text-[#AEAEAE] ">JOB TYPE</p></div>
+        <div className="flex pl-[10px] text-[13px] items-center"><p className="text-[11px] !text-[#AEAEAE] ">COMPANY</p></div>
+        <div className="flex pl-[10px] text-[13px] items-center"><p className="text-[11px] !text-[#AEAEAE] ">APPLICATION</p></div>
+        <div className="flex pl-[10px] text-[13px] items-center"><p className="text-[11px] !text-[#AEAEAE] ">STATUS</p></div>
+        <div className="flex pl-[10px] text-[13px] items-center"><p className="text-[11px] !text-[#AEAEAE] ">ACTION</p></div>
       </div>
 
       {/* Rows */}
       {paginatedData.map((row, index) => (
         <div
           key={index}
-          className="grid grid-cols-5 border-b border-[#2C2C2C] px-4 py-2"
+          className="grid grid-cols-6 border-b border-[#2C2C2C] px-4 py-2"
         >
-          <div className="break-words">{row.jobTitle || "-------"}</div>
-          <div className="break-words">{row.jobType || "-------"}</div>
-          <div className="break-words">{row.company || "-------"}</div>
-          <div className="break-words">{row.application || "-------"}</div>
+          <div className="break-words text-[12px] items-center py-[10px] "><p className="text-[11px] pl-[15px] ">{row.jobTitle || "-------"}</p></div>
+          <div className="break-words text-[12px] items-center py-[10px] "><p className="text-[11px]  pl-[15px]">{row.jobType || "-------"}</p> </div>
+          <div className="break-words text-[12px] items-center py-[10px] "><p className="text-[11px]  pl-[15px]">{row.company || "-------"}</p></div>
+          <div className="break-words text-[12px] items-center py-[10px] "><p className="text-[11px]  pl-[15px]">{row.application || "-------"}</p></div>
           <div
-            className={`break-words ${
-              row.status === "Active" ? "text-[#3BAA5C]" : "text-[#FF231C]"
-            }`}
+            className={`break-words text-[12px] py-[10px] `}
           >
+            <p className={` text-[11px] pl-[15px] ${
+      row.status === "Active" ? " !text-[#3BAA5C]" : " !text-[#FF231C]"
+    }  `}>
             {row.status || "-------"}
+            </p>
           </div>
+          <div className="break-words text-[12px] items-center py-[10px] "><p className={` text-[11px] pl-[15px] ${
+      row.action === "Disable" ? " !text-[#2FA0E8]" : " !text-[#2FA0E8]"
+    }  `}>{row.action || "-------"}</p></div>
+          
         </div>
       ))}
 
       {/* Pagination */}
-      <div className="flex justify-between items-center p-4 border-t border-[#2C2C2C]">
+      <div className="flex justify-between mt-[15px] items-center p-4 ">
         <Button
           variant="outline"
-          size="sm"
+          size="smd"
           disabled={page === 1}
           onClick={() => setPage((p) => Math.max(p - 1, 1))}
         >
           Previous
         </Button>
 
-        <span>
+        <span className=" text-[12px] ">
           Page {page} of {totalPages}
         </span>
 
         <Button
           variant="outline"
-          size="sm"
+          size="smd"
           disabled={page === totalPages}
           onClick={() => setPage((p) => Math.min(p + 1, totalPages))}
         >

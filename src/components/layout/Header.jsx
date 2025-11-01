@@ -1,15 +1,13 @@
 import Icons from "@/assets/icons"; 
-import cn from "classnames"; 
 
-const Header = ({ logoWidth = 140, logoHeight = 48 }) => {
+const Header = ({ logoWidth = 90, logoHeight = 90 }) => {
   return (
     <header
-      className={cn(
-        "w-full h-[127px] bg-[#0D0D0D] flex items-center"
-      )}
+      className=
+        "w-full h-[60px] bg-[#0D0D0D] flex items-center"
     >
       <div
-        className="flex items-center gap-3 ml-16"
+        className="flex items-center gap-3 ml-[35px] "
         style={{ width: logoWidth, height: logoHeight }}
       >
         <img
