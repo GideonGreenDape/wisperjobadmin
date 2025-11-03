@@ -1,5 +1,4 @@
 import Images from "../assets/images";
-import PasswordChecklist from "../components/forms/passwordchecklist";
 import Button from "../components/ui/button";
 import Input from "../components/ui/Input";
 import SocialLogin from "../components/socials/socialLogin";
@@ -22,7 +21,7 @@ function SignIn() {
       </div>
       <div className="w-[640px] gap-[20px] mt-[80px] flex flex-col justify-center items-start ">
         <div className="w-[350px] mb-[20px] flex justify-between items-center ">
-         <Link to={'/signup'} className=" text-[#168DE1] underline-none font-bold font-medium text-[14px]">Sign Up</Link>
+         <Link to={'/signup'} className=" !text-[#168DE1] no-underline font-bold font-medium text-[14px]">Sign Up</Link>
           {/* <Link to={''} className="text-[#168DE1] font-medium text-[14px]">Login</Link> */}
         </div>
         <div className=" ">
@@ -60,7 +59,7 @@ function SignIn() {
           </div>
 
           <div className="flex justify-center mt-[15px] ">
-             <p className="text-[12px] text-center text-[#8c8c8c] font-light mt-[] w-[300px] ">
+             <p className="text-[12px] text-center !text-[#8c8c8c] font-light mt-[] w-[300px] ">
                 By signing in, i agree to the wisper 
                 Terms & conditions and Privacy policy
             </p>

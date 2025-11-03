@@ -7,6 +7,7 @@ const sizes = {
   smd: "h-[20px] w-[50px] text-[10px] ",
   sm: "h-[37px] w-[100px] text-[13px]",
   md: "h-[37px] w-[115px] text-[13px]",
+  smd: "h-[41px] w-[145px] text-[12px] ",
   lg: "h-[40px] w-[360px] text-[13px]",
 };
 

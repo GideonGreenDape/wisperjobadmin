@@ -1,11 +1,13 @@
 const sizes = {
-  sm: "w-[162px] h-[56px] ",
+  sm: "w-[102px] h-[38px] ",
   smd: "w-[250px] h-[38px] ",
   md: "w-[330px] h-[38px] ",
   lg: "w-[547px] h-[38px] ",
+  slg: "w-[65vw] h-[38px]  ",
   xl: "w-[766px] h-[56px] ",
   xxl: "w-[951px] h-14 ",
-  textarea: "w-[951px] h-14 ",
+  special: "w-[31vw] h-[38px] ",
+  textarea: "w-[67vw] h-[100px] ",
   full: "w-full h-14 ",
 };
 
@@ -54,7 +56,7 @@ const Input = ({
         }`}
         />
         {addon && (
-          <span className="px-3 text-white text-[20px] font-normal  ">
+          <span className="px-3 text-white text-[13px] font-normal  ">
             {addon}{" "}
           </span>
         )}

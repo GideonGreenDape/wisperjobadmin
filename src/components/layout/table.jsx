@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "../ui/button";
 
-const Table = ({ data }) => {
+const Table = ({ data, width }) => {
   const [page, setPage] = useState(1);
   const rowsPerPage = 10;
 
@@ -11,7 +11,7 @@ const Table = ({ data }) => {
   const totalPages = Math.ceil(data.length / rowsPerPage);
 
   return (
-    <div className="w-[900px] mt-[20px]  text-[16px] text-white font-normal">
+    <div className={`${width} mt-[-10px] text-[16px] text-white font-normal`}>
       {/* Header */}
       <div className="grid grid-cols-6 h-[49px] bg-[#000] border-b !border-[#2C2C2C] px-4">
         <div className="flex pl-[10px]  items-center"><p className="text-[11px] !text-[#AEAEAE] pl-[10px]  ">JOB TITLE</p></div>
@@ -59,7 +59,7 @@ const Table = ({ data }) => {
           Previous
         </Button>
 
-        <span className=" text-[12px] ">
+        <span className=" text-[10px] ">
           Page {page} of {totalPages}
         </span>
 

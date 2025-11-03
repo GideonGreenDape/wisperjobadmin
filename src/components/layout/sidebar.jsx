@@ -4,10 +4,10 @@ import Icons from "../../assets/icons";
 function SideBar({ width }) {
   const navItems = [
     { icon: Icons.LayoutDashboard, label: "Dashboard", path: "/dashboard" },
-    { icon: Icons.JobIcon, label: "Jobs", path: "/jobs" },
-    { icon: Icons.CourseIcon, label: "Courses", path: "/courses" },
-    { icon: Icons.WalletIcon, label: "Wallet", path: "/wallet" },
-    { icon: Icons.ProfileIcon, label: "Profile", path: "/profile" },
+    { icon: Icons.JobIcon, label: "Jobs", path: "/dashboard/jobs" },
+    { icon: Icons.CourseIcon, label: "Courses", path: "/dashboard/courses" },
+    { icon: Icons.WalletIcon, label: "Wallet", path: "/dashboard/wallet" },
+    { icon: Icons.ProfileIcon, label: "Profile", path: "/dashboard/profile" },
   ];
 
   const bottomNav = [
@@ -39,7 +39,7 @@ function SideBar({ width }) {
             }
           >
             <item.icon className="w-[18px] " />
-            <p className="text-[15px]">{item.label}</p>
+            <p className="text-[13px]">{item.label}</p>
           </NavLink>
         ))}
       </div>

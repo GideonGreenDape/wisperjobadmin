@@ -9,9 +9,9 @@ function Dashboard() {
     <SideBar width={'w-[250px]'} />
   </div>
 
-  <div className="flex flex-col flex-1 ml-[240px] p-6">
-    <div className="mb-6 flex justify-center">
-      <MiniHeader width="w-[900px]" display="Dashboard" />
+  <div className="flex flex-col flex-1 ml-[350px] p-6">
+    <div className="mb-6 flex ">
+      <MiniHeader width="w-[70vw]" display="Dashboard" />
     </div>
 
     <div className="flex-1 overflow-y-auto custom-scrollbar">

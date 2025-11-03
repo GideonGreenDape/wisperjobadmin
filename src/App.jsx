@@ -2,14 +2,17 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/index.jsx";
 
-// import Jobs from "./pages/dashboard/jobs/index.jsx";
-// import Courses from "./pages/dashboard/Courses/index.jsx";
-// import Wallet from "./pages/Dashboard/wallet/index.jsx";
+import Jobs from "./pages/Dashboard/Jobs/index.jsx";
+import JobDetails from "./pages/Dashboard/Jobs/jobDetails.jsx";
+import JobEdit from "./pages/Dashboard/Jobs/jobEdit.jsx";
+import JobHome from "./pages/Dashboard/Jobs/jobHome.jsx";
+
+import Courses from "./pages/dashboard/Courses/index.jsx";
+import Wallet from "./pages/Dashboard/wallet/index.jsx";
 
 import DashboardHome from "./pages/Dashboard/dashboardHome.jsx";
 
-// import Profile from "./pages/dashboard/profile/index.jsx";
-
+import Profile from "./pages/dashboard/profile/index.jsx";
 
 import Onboarding from "./pages/onboardingPage.jsx";
 import Signup from "./pages/signupPage.jsx";
@@ -49,31 +52,44 @@ const router = createBrowserRouter([
     element: <ProfileUploadPage />,
   },
 
-  
   {
     path: "/dashboard",
     element: <Dashboard />,
     children: [
       {
-        index: true, 
+        index: true,
         element: <DashboardHome />,
       },
-      // {
-      //   path: "jobs",
-      //   element: <Jobs />,
-      // },
-      // {
-      //   path: "courses",
-      //   element: <Courses />,
-      // },
-      // {
-      //   path: "wallet",
-      //   element: <Wallet />,
-      // },
-      // {
-      //   path: "profile",
-      //   element: <Profile />,
-      // },
+      {
+        path: "jobs",
+        element: <Jobs />,
+        children: [
+          {
+            index: true,
+            element: <JobHome />,
+          },
+          {
+            path: "create-job",
+            element: <JobEdit />,
+          },
+          {
+            path: ":id",
+            element: <JobDetails />,
+          }
+        ],
+      },
+      {
+        path: "courses",
+        element: <Courses />,
+      },
+      {
+        path: "wallet",
+        element: <Wallet />,
+      },
+      {
+        path: "profile",
+        element: <Profile />,
+      },
     ],
   },
 ]);

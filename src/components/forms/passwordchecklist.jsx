@@ -32,8 +32,9 @@ const PasswordChecklist = ({ password }) => {
           >
             <Icons.CircleCheck
               size={16}
-              strokeWidth={2}
-              className={rule.valid ? ` !text-[#168DE1]` : ` !text-[#f9f9f9] `}
+              strokeWidth={2} style={{
+                stroke: rule.valid ? "#168DE1" : "#f9f9f9",
+              }}
             />
             <span
               className={`text-[10px] ml-[10px] ${

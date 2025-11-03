@@ -21,7 +21,9 @@ import { LayoutDashboard,
     Check, 
     Headset as Support, 
     LogOut, 
-    CornerRightUp  } from 'lucide-react';
+    CornerRightUp,
+    SlidersVertical
+} from 'lucide-react';
 
 
 
@@ -51,7 +53,8 @@ const Icons = {
     Check,
     Support,
     LogOut,
-    CornerRightUp
+    CornerRightUp,
+    SlidersVertical,
 }
 
 

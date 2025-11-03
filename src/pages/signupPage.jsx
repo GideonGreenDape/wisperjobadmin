@@ -17,8 +17,8 @@ function Signup() {
         <div className="flex items-start h-screen mt-[20px] bg-[#000000] justify-center pt-[25px] gap-[100px] ">
       <div className="flex flex-col justify-center items-start ">
         <div className="w-[355px] flex justify-between items-center ">
-          <p className=" font-bold text-[16px] text-[#ffffff]">SignUp</p>
-          <Link to={'/signin'} className="text-[#168DE1] underline-none font-bold font-medium text-[14px]">Login</Link>
+          <h3 className=" font-bold text-[14px] text-[#ffffff]">SignUp</h3>
+          <Link to={'/signin'} className=" !text-[#168DE1] no-underline font-bold font-medium text-[14px]">Login</Link>
         </div>
         <div className="flex flex-col mt-[19px] gap-[15px] ">
           <Input
@@ -70,7 +70,7 @@ function Signup() {
             <SocialLogin />
           </div>
 
-           <p className="self-center text-[12px] text-[#8c8c8c] font-light text-center w-[250px] ">
+        <p className="self-center text-[12px] !text-[#8c8c8c] font-light text-center w-[250px] ">
                 By signing up, i agree to the wisper 
                 Terms & conditions and Privacy policy
             </p>
