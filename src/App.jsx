@@ -9,12 +9,15 @@ import JobDetails from "./pages/Dashboard/Jobs/jobDetails.jsx";
 import JobEdit from "./pages/Dashboard/Jobs/jobEdit.jsx";
 import JobHome from "./pages/Dashboard/Jobs/jobHome.jsx";
 
-// import Courses from "./pages/dashboard/courses/index.jsx";
+import Courses from "./pages/dashboard/courses/index.jsx";
+import CourseHome from "./pages/Dashboard/courses/courseCreate.jsx";
+
 import Wallet from "./pages/Dashboard/wallet/index.jsx";
 
 import DashboardHome from "./pages/Dashboard/dashboardHome.jsx";
 
 import Profile from "./pages/dashboard/profile/index.jsx";
+import EditProfile from "./pages/Dashboard/profile/editProfile.jsx";
 
 import Onboarding from "./pages/onboardingPage.jsx";
 import Signup from "./pages/signupPage.jsx";
@@ -23,7 +26,6 @@ import TrackPage from "./pages/trackPage.jsx";
 import ProfilePage from "./pages/profileSetupPage.jsx";
 import OtpPage from "./pages/otpPage.jsx";
 import ProfileUploadPage from "./pages/profileUpload.jsx";
-
 
 const router = createBrowserRouter([
   {
@@ -96,10 +98,16 @@ const router = createBrowserRouter([
           },
         ],
       },
-      // {
-      //   path: "courses",
-      //   element: <Courses />,
-      // },
+      {
+        path: "courses",
+        element: <Courses />,
+        children: [
+          {
+            index: true,
+            element: <CourseHome />,
+          },
+        ],
+      },
       {
         path: "wallet",
         element: <Wallet />,
@@ -107,11 +115,16 @@ const router = createBrowserRouter([
       {
         path: "profile",
         element: <Profile />,
+         children: [
+          {
+            index: true,
+            element: <EditProfile />,
+          },
+        ],
       },
     ],
   },
 ]);
-
 
 function App() {
   return <RouterProvider router={router} />;
