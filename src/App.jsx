@@ -9,7 +9,7 @@ import JobDetails from "./pages/Dashboard/Jobs/jobDetails.jsx";
 import JobEdit from "./pages/Dashboard/Jobs/jobEdit.jsx";
 import JobHome from "./pages/Dashboard/Jobs/jobHome.jsx";
 
-import Courses from "./pages/dashboard/courses/index.jsx";
+// import Courses from "./pages/dashboard/courses/index.jsx";
 import Wallet from "./pages/Dashboard/wallet/index.jsx";
 
 import DashboardHome from "./pages/Dashboard/dashboardHome.jsx";
