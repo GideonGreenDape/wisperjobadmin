@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL?.trim() || "https://api.wisper.com";
+const API_BASE_URL = import.meta.env.VITE_API_URL?.trim();
 
 
 const apiClient = axios.create({
