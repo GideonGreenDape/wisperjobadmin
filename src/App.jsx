@@ -9,14 +9,14 @@ import JobDetails from "./pages/Dashboard/Jobs/jobDetails.jsx";
 import JobEdit from "./pages/Dashboard/Jobs/jobEdit.jsx";
 import JobHome from "./pages/Dashboard/Jobs/jobHome.jsx";
 
-import Courses from "./pages/dashboard/courses/index.jsx";
+import Courses from "./pages/Dashboard/courses/index.jsx";
 import CourseHome from "./pages/Dashboard/courses/courseCreate.jsx";
 
 import Wallet from "./pages/Dashboard/wallet/index.jsx";
 
 import DashboardHome from "./pages/Dashboard/dashboardHome.jsx";
 
-import Profile from "./pages/dashboard/profile/index.jsx";
+import Profile from "./pages/Dashboard/profile/index.jsx";
 import EditProfile from "./pages/Dashboard/profile/editProfile.jsx";
 
 import Onboarding from "./pages/onboardingPage.jsx";
