@@ -10,6 +10,8 @@ import {
 } from "../../../config/dropdowns";
 import Button from "../../../components/ui/button";
 import { useState } from "react";
+import { postRequest } from "../../../http/request";
+import { useToast } from "../../../components/Toast/ToastContext";
 
 function JobEdit() {
   const [jobTitle, setJobTitle] = useState("");
@@ -21,7 +23,51 @@ function JobEdit() {
   const [experienceLevel, setexperienceLevel] = useState("");
   const [qualificationLevel, setqualificationLevel] = useState("");
   const [applicationMethod, setApplicationMethod] = useState("");
+  const [applicationUrl, setApplicationUrl] = useState("");
   const [price, setPrice] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const { showToast } = useToast();
+
+  const handleSaveJob = async () => {
+    if (!jobTitle) return showToast("Job title is required", "error");
+
+    const payload = {
+      title: jobTitle,
+      company,
+      description,
+      jobType: selectedJobType,
+      experienceLevel,
+      pricePerHour: price,
+      qualification: qualificationLevel,
+      applicationMethod,
+      applicationUrl,
+    };
+
+    try {
+      setLoading(true);
+      const response = await postRequest("/jobs", payload);
+      showToast("Job created successfully!", "success");
+
+      
+      setJobTitle("");
+      setCompany("");
+      setDescription("");
+      setSelectedJobType("");
+      setjobLocation("");
+      setcompensationType("");
+      setexperienceLevel("");
+      setqualificationLevel("");
+      setApplicationMethod("");
+      setApplicationUrl("");
+      setPrice("");
+    } catch (error) {
+      console.error(error);
+      showToast(error?.message || "Failed to create job", "error");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="flex flex-col mt-[20px] gap-[30px] ">
@@ -133,6 +179,8 @@ function JobEdit() {
           variant="secondary"
           className="text-[#ffffff] rounded-[7px] "
           to={""}
+          disabled={loading}
+          onClick={handleSaveJob}
         >
           Save
         </Button>

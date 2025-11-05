@@ -10,7 +10,7 @@ function SearchBar({ width, data, onSearch }) {
 
     
     const filtered = data.filter((job) => {
-      const titleMatch = job.jobTitle.toLowerCase().includes(value.toLowerCase());
+      const titleMatch = job.title.toLowerCase().includes(value.toLowerCase());
       const typeMatch = job.jobType.toLowerCase().includes(value.toLowerCase());
       return titleMatch || typeMatch;
     });

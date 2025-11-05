@@ -2,6 +2,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/index.jsx";
 
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
+
 import Jobs from "./pages/Dashboard/Jobs/index.jsx";
 import JobDetails from "./pages/Dashboard/Jobs/jobDetails.jsx";
 import JobEdit from "./pages/Dashboard/Jobs/jobEdit.jsx";
@@ -22,6 +24,7 @@ import ProfilePage from "./pages/profileSetupPage.jsx";
 import OtpPage from "./pages/otpPage.jsx";
 import ProfileUploadPage from "./pages/profileUpload.jsx";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -41,20 +44,35 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    element: <ProfilePage />,
+    element: (
+      <ProtectedRoute>
+        <ProfilePage />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/otpConfirm",
-    element: <OtpPage />,
+    element: (
+      <ProtectedRoute>
+        <OtpPage />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/profileupload",
-    element: <ProfileUploadPage />,
+    element: (
+      <ProtectedRoute>
+        <ProfileUploadPage />
+      </ProtectedRoute>
+    ),
   },
-
   {
     path: "/dashboard",
-    element: <Dashboard />,
+    element: (
+      <ProtectedRoute>
+        <Dashboard />
+      </ProtectedRoute>
+    ),
     children: [
       {
         index: true,
@@ -75,7 +93,7 @@ const router = createBrowserRouter([
           {
             path: ":id",
             element: <JobDetails />,
-          }
+          },
         ],
       },
       {
@@ -93,6 +111,7 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
 
 function App() {
   return <RouterProvider router={router} />;

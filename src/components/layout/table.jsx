@@ -28,7 +28,7 @@ const Table = ({ data, width }) => {
           key={index}
           className="grid grid-cols-6 border-b border-[#2C2C2C] px-4 py-2"
         >
-          <div className="break-words text-[12px] items-center py-[10px] "><p className="text-[11px] pl-[15px] ">{row.jobTitle || "-------"}</p></div>
+          <div className="break-words text-[12px] items-center py-[10px] "><p className="text-[11px] pl-[15px] ">{row.title || "-------"}</p></div>
           <div className="break-words text-[12px] items-center py-[10px] "><p className="text-[11px]  pl-[15px]">{row.jobType || "-------"}</p> </div>
           <div className="break-words text-[12px] items-center py-[10px] "><p className="text-[11px]  pl-[15px]">{row.company || "-------"}</p></div>
           <div className="break-words text-[12px] items-center py-[10px] "><p className="text-[11px]  pl-[15px]">{row.application || "-------"}</p></div>
