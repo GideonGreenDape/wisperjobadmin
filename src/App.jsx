@@ -96,10 +96,10 @@ const router = createBrowserRouter([
           },
         ],
       },
-      {
-        path: "courses",
-        element: <Courses />,
-      },
+      // {
+      //   path: "courses",
+      //   element: <Courses />,
+      // },
       {
         path: "wallet",
         element: <Wallet />,
