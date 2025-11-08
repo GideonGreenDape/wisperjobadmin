@@ -13,6 +13,8 @@ const apiClient = axios.create({
 
 apiClient.interceptors.request.use(
   (config) => {
+    console.log(`➡️ Sending ${config.method?.toUpperCase()} request to: ${config.baseURL}${config.url}`);
+
     const token = localStorage.getItem("authToken");
     if (token) {
       config.headers.authorization = `Bearer ${token}`;
