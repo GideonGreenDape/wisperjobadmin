@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icons from "../../assets/icons";
 
-function SearchBar({ width, data, onSearch }) {
+function SearchBar({ width, data, onSearch,placeholder="Search job by title or category " }) {
   const [query, setQuery] = useState("");
 
   const handleSearch = (e) => {
@@ -25,7 +25,7 @@ function SearchBar({ width, data, onSearch }) {
         type="text"
         value={query}
         onChange={handleSearch}
-        placeholder="Search job by title or category"
+        placeholder={placeholder}
         className={`border border-[#8C8C8C]/60 h-[22px] text-[12px] rounded-[7px] px-[15px] py-[10px] ${width} focus:outline-none text-white bg-transparent`}
       />
       <div className="flex items-center justify-center w-[43px] h-[43px] border border-l border-[#8C8C8C]/60 rounded-[7px]">

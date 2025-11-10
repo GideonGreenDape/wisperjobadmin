@@ -20,6 +20,10 @@ import { LayoutDashboard,
     Circle, 
     Check, 
     Headset as Support, 
+    PencilLine,
+    CloudUpload,
+    Dot,
+    Trash,
     LogOut, 
     CornerRightUp,
     SlidersVertical
@@ -55,6 +59,10 @@ const Icons = {
     LogOut,
     CornerRightUp,
     SlidersVertical,
+    CloudUpload,
+    PencilLine,
+    Dot,
+    Trash
 }
 
 

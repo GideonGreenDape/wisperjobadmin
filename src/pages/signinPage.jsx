@@ -5,13 +5,13 @@ import SocialLogin from "../components/socials/socialLogin";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { postRequest } from "../http/request";
-import { useToast } from "../components/Toast/ToastContext"; 
+import { useToast } from "../components/Toast/ToastContext";
 
 function SignIn() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const { showToast } = useToast(); 
+  const { showToast } = useToast();
   const navigate = useNavigate();
 
   const handleSignIn = async () => {
@@ -24,23 +24,38 @@ function SignIn() {
       setLoading(true);
       const payload = { email, password };
       const response = await postRequest("/auth/signin", payload);
-      localStorage.setItem("authToken", response.token);
 
-      if (response?.success || response?.status === 200) {
+      if (response?.token) {
+        localStorage.setItem("authToken", response.token);
         showToast("Sign in successful!", "success");
-        navigate("/track");
-      } else {
-        showToast(response?.message || "Invalid email or password.", "error");
+        navigate("/dashboard");
+        return;
       }
+
+      showToast(response?.message || "Invalid email or password.", "error");
     } catch (error) {
-      console.error("Sign in error:", error);
-      showToast(
-        error?.message || "An error occurred while signing in.",
-        "error"
-      );
-    } finally {
-      setLoading(false);
+  console.error("Sign in error:", error);
+
+  // Handle both object and string error shapes
+  const data = typeof error === "object" ? error : { message: error };
+  const message = data?.message || "Signin failed";
+
+  if (
+    message.toLowerCase().includes("profile not verified") ||
+    message.toLowerCase().includes("verify otp")
+  ) {
+    if (data?.token) {
+      localStorage.setItem("authToken", data.token);
     }
+    showToast("Please verify your OTP to continue", "info");
+    navigate("/profile");
+    return;
+  }
+
+  showToast(message, "error");
+}
+
+
   };
 
   return (

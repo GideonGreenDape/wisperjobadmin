@@ -1,8 +1,10 @@
+import { Outlet } from "react-router-dom";
+
 function Profile() {
     return(
-        <div>
-            profile page loading...
-        </div>
+         <div className="flex-1 flex-1 overflow-y-auto custom-scrollbar">
+        <Outlet />
+      </div>
     )
 }
 
