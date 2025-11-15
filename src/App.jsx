@@ -1,8 +1,9 @@
-// routes.jsx or main.jsx
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/index.jsx";
 
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
+
+import GoogleCallback from "./pages/googlecallback.jsx";
 
 import Jobs from "./pages/Dashboard/Jobs/index.jsx";
 import JobDetails from "./pages/Dashboard/Jobs/jobDetails.jsx";
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/signin",
     element: <SignIn />,
+  },
+  {
+    path: "/auth/google/callback",
+    element: <GoogleCallback />
   },
   {
     path: "/track",

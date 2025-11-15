@@ -36,7 +36,7 @@ function SignIn() {
     } catch (error) {
   console.error("Sign in error:", error);
 
-  // Handle both object and string error shapes
+  
   const data = typeof error === "object" ? error : { message: error };
   const message = data?.message || "Signin failed";
 
