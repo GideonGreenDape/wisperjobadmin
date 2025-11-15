@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import Loader from "../components/ui/loader";
 
 function GoogleCallback() {
@@ -8,23 +7,25 @@ function GoogleCallback() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const code = urlParams.get("code");
+    const params = new URLSearchParams(window.location.search);
 
-    if (code) {
-      axios
-        .post(`${import.meta.env.VITE_API_URL}/auth/google/callback`, { code })
-        .then((res) => {
-          const { token, user } = res.data;
+    const token = params.get("token");
+    const email = params.get("email");
+    const role = params.get("role");
 
-          localStorage.setItem("authToken", token);
-        //   localStorage.setItem("user", JSON.stringify(user));
+    if (token) {
+      // save login token
+      localStorage.setItem("authToken", token);
 
-          navigate("/dashboard");
-        })
-        .catch(() => navigate("/login"))
-        .finally(() => setLoading(false));
+      
+      // localStorage.setItem("user", JSON.stringify({ email, role }));
+
+      navigate("/dashboard");
+    } else {
+      navigate("/signin");
     }
+
+    setLoading(false);
   }, []);
 
   if (loading) return <Loader />;
