@@ -8,7 +8,7 @@ import DeleteProfile from "../../../components/layout/deleteProfile";
 function EditProfile({ name, industry }) {
   const [logged, setLogged] = useState(false);
   const navigate = useNavigate();
-  const [showDeleteModal, setShowDeleteModal] = useState(false); // ✅ modal state
+  const [showDeleteModal, setShowDeleteModal] = useState(false); 
   const [profile, setProfile] = useState({
     firstName: "",
     lastName: "",
