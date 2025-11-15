@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import Loader from "../components/ui/loader";
 
 function GoogleCallback() {
@@ -9,45 +8,36 @@ function GoogleCallback() {
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-
     const token = urlParams.get("token");
     const email = urlParams.get("email");
     const role = urlParams.get("role");
 
-    if (!token) {
-      navigate("/signin");
-      return;
+    if (token) {
+      localStorage.setItem("authToken", token);
+
+      
+      fetch(`${import.meta.env.VITE_API_URL}/profile/basic`, {
+        headers: { Authorization: `Bearer ${token}` }
+      })
+        .then(async (res) => {
+          if (res.status === 404) {
+            
+            navigate("/profile");
+          } else {
+            const data = await res.json();
+            localStorage.setItem("User_profile", JSON.stringify(data));
+            navigate("/dashboard");
+          }
+        })
+        .catch(() => navigate("/profile"))
+        .finally(() => setLoading(false));
+    } else {
+      navigate("/login");
+      setLoading(false);
     }
-
-    
-    localStorage.setItem("authToken", token);
-    localStorage.setItem("user", JSON.stringify({ email, role }));
-
-   
-    axios
-      .get(`${import.meta.env.VITE_API_URL}/profile/basic`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      .then((res) => {
-        // Profile exists → save it
-        localStorage.setItem("User_profile", JSON.stringify(res.data));
-        navigate("/dashboard");
-      })
-      .catch((err) => {
-        if (err.response?.status === 404) {
-          
-          navigate("/profile");
-        } else {
-          navigate("/signin");
-        }
-      })
-      .finally(() => setLoading(false));
   }, []);
 
   if (loading) return <Loader />;
-
   return null;
 }
 
