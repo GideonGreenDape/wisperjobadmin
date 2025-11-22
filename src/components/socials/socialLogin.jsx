@@ -12,10 +12,10 @@ function SocialLogin() {
 
           <div className='flex gap-[4px] items-center w-[60px]'>
               
-           
+{/*            
             <div className='flex items-center w-[32px] h-[32px]'>
                 <img width="24" height="24" src={Icons.facebook} alt="Facebook Icons" />
-            </div>
+            </div> */}
 
            
             <div 
