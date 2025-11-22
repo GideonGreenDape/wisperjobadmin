@@ -25,7 +25,12 @@ function GoogleCallback() {
           } else {
             const data = await res.json();
             localStorage.setItem("User_profile", JSON.stringify(data));
-            navigate("/dashboard");
+            if(data.verified === false){
+              navigate("/profile")
+            }
+            else{
+              navigate("/dashboard");
+            }
           }
         })
         .catch(() => navigate("/profile"))
