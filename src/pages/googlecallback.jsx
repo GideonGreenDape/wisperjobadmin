@@ -20,8 +20,7 @@ function GoogleCallback() {
         headers: { Authorization: `Bearer ${token}` }
       })
         .then(async (res) => {
-          if (res.status === 404) {
-            
+          if (res.status === 500) {    
             navigate("/profile");
           } else {
             const data = await res.json();
