@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const baseStyles =
-  "inline-flex items-center justify-center rounded-2xl  font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed";
+  "inline-flex items-center justify-center rounded-2xl  font-medium transition-colors focus:outline-none  disabled:cursor-not-allowed";
 
 const sizes = {
   // smd: "h-[20px] w-[50px] text-[10px] ",
@@ -13,9 +13,9 @@ const sizes = {
 
 const variants = {
   primary:
-    "bg-[#000000] text-[#ffffff]  hover:opacity-90 active:bg-gray-800 disabled:opacity-60",
+    "bg-[#000000] text-[#ffffff] border-[0px]  ",
   secondary:
-    "bg-[#168DE1] text-white  border-[#168DE1] hover:bg-[#0f6dad] active:bg-[#093F66] disabled:opacity-60",
+    "bg-[#168DE1] text-white border-[0px]   ",
   outline:
     "bg-transparent text-black border-black hover:bg-gray-50 active:bg-gray-200 disabled:opacity-60",
   danger:

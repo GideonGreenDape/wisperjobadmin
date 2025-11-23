@@ -24,9 +24,12 @@ import { LayoutDashboard,
     CloudUpload,
     Dot,
     Trash,
+    Trash2 as Delete,
     LogOut, 
     CornerRightUp,
-    SlidersVertical
+    SlidersVertical,
+    Upload,
+    Image as ImageIcon2
 } from 'lucide-react';
 
 
@@ -62,7 +65,10 @@ const Icons = {
     CloudUpload,
     PencilLine,
     Dot,
-    Trash
+    Trash,
+    Delete,
+    Upload,
+    ImageIcon2
 }
 
 
