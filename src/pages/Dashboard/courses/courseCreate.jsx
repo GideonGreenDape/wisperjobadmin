@@ -2,6 +2,7 @@ import Input from "../../../components/ui/Input";
 import TextArea from "../../../components/forms/textarea";
 import ImageUploader from "../../../components/ui/imageuploader";
 import Button from "../../../components/ui/button";
+import { dummyCourses } from "../../../dummy/dummycourse";
 import { uploadRequest } from "../../../http/request";
 import { useToast } from "../../../components/Toast/ToastContext";
 import { useState } from "react";
@@ -13,7 +14,10 @@ function CourseCreate() {
   const [uploadedFile, setUploadedFile] = useState(null);
   const [loading, setLoading] = useState(false);
 
+
   const { showToast } = useToast();
+
+
 
   const handleFileReceived = (file) => {
     setUploadedFile(file);
@@ -38,7 +42,7 @@ function CourseCreate() {
         formData.append("image", uploadedFile);
       }
 
-      const response = await uploadRequest("/courses/create", formData);
+      const response = await uploadRequest("/courses", formData);
 
       console.log("Created:", response);
       showToast("Course created successfully!");

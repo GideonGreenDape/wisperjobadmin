@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getRequest } from "../../../http/request";
 import CourseCard from "../../../components/layout/courses/courseCard";
-import { useNavigate } from "react-router-dom";
+import { data, useNavigate } from "react-router-dom";
 import CourseStats from "../../../components/layout/courses/courseStats";
 import Button from "../../../components/ui/button";
 import SearchBar from "../../../components/ui/searchbar";
@@ -11,10 +11,13 @@ function CourseHome() {
   const [courses, setCourses] = useState([]);
   const navigate = useNavigate();
 
+  
+
+
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const data = await getRequest("/courses/all");
+        const data = await getRequest("/courses");
         setCourses(data);
       } catch (error) {
         console.error("Error fetching courses:", error);
@@ -32,7 +35,7 @@ function CourseHome() {
   return (
     <div className="flex flex-col mt-[30px] gap-[30px] ">
       <div className="flex items-center justify-between w-[70vw] ">
-        <CourseStats />
+        <CourseStats totalNumber={courses.length} />
         <Button
           size="smd"
           variant="secondary"
@@ -46,7 +49,7 @@ function CourseHome() {
         <SearchBar width="w-[61.5vw] " placeholder="Search course by title " />
         {/* <Icons.FilterIcon size={19} /> */}
       </div>
-      <div className="flex flex-wrap gap-[20px] w-[70vw] ">
+      <div className="flex flex-wrap  gap-[20px] mb-[60px] w-[70vw] ">
         {courses.map((course) => (
           <CourseCard
             key={course._id}
@@ -54,7 +57,7 @@ function CourseHome() {
             coursetitle={course.title}
             description={course.description}
             price={course.price}
-            onClick={() => handleCourseClick(course._id)}
+            // onClick={() => handleCourseClick(course._id)}
           />
         ))}
       </div>

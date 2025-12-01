@@ -28,8 +28,8 @@ function DashboardHome() {
         setWalletBalance(walletResponse?.balance || 0);
 
         
-        const coursesResponse = await getRequest("/courses/count");
-        setNumberOfCourses(coursesResponse?.count || 0);
+        const coursesResponse = await getRequest("/courses");
+        setNumberOfCourses(coursesResponse?.length || 0);
 
       } catch (err) {
         console.error("Failed to fetch dashboard data", err);

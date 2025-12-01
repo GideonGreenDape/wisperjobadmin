@@ -18,13 +18,13 @@ function CourseCard({
        hover:scale-[1.02] transition-all duration-200"
     >
       <img
-        className="w-[192px] h-[133px]"
+        className="w-[162px] self-center h-[133px]"
         src={`${import.meta.env.VITE_API_FOR_IMAGE}${profilePhoto}`}
         alt=""
       />
-      <h4 className="text-[15px] font-normal">{coursetitle}</h4>
-      <p className="text-[13px]">{shortDescription}</p>
-      <p className="text-[15px] !text-[#99D1F6]">₦{price}</p>
+      <h4 className="text-[13px] text-[#fff]  font-normal">{coursetitle}</h4>
+      <p className="text-[12px] w-[210px] ">{shortDescription}</p>
+      <p className="text-[14px] !text-[#99D1F6]">₦{price}</p>
     </div>
   );
 }
