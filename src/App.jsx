@@ -122,6 +122,10 @@ const router = createBrowserRouter([
       {
         path: "wallet",
         element: <Wallet />,
+        // children: [
+        //   index: true,
+        //   element: 
+        // ]
       },
       {
         path: "profile",

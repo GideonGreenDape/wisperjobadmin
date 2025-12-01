@@ -35,7 +35,7 @@ export default function ImageUploader({ onFileChange }) {
   };
 
   return (
-    <div className="w-[910px] ml-[30px] mr-[40px] max-w-lg rounded-[9px]  bg-[#111] p-4 text-gray-200">
+    <div className="w-[66vw] ml-[30px] mr-[40px] max-w-lg rounded-[9px]  bg-[#111] p-4 text-gray-200">
        
       {!file && (
         <label className="flex flex-col items-center  h-[100px] justify-center w-full py-6 rounded-lg cursor-pointer">

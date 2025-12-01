@@ -11,8 +11,8 @@ function SideBar({ width }) {
   ];
 
   const bottomNav = [
-    { icon: Icons.Support, label: "Help Center", path: "/help" },
-    { icon: Icons.LogOut, label: "Logout", path: "/logout" },
+    { icon: Icons.Support, label: "Help Center", path: "" },
+    { icon: Icons.LogOut, label: "Logout", path: "" },
   ];
 
   return (

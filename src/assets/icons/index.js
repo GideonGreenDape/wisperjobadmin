@@ -5,6 +5,9 @@ import stateOne from './stateOne.png';
 import stateTwo from './stateTwo.png';
 import stateThree from './stateThree.png';
 import backarrow from './backarrow.png'
+import loss from './loss.png';
+import profit from './profit.png';
+import indicator from './indicator.png'
 
 // lucide -icons
 import { LayoutDashboard, 
@@ -44,6 +47,9 @@ const Icons = {
     stateTwo,
     stateThree,
     backarrow,
+    loss,
+    profit,
+    indicator,
     
     // lucide Icons
     LayoutDashboard,
